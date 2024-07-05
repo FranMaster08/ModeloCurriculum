@@ -10,6 +10,10 @@
 
 <body>
 
+  <div class="download-button">
+    <button onclick="window.print()">Descargar CV en PDF</button>
+  </div>
+
   <div class="resume">
     <div class="resume_left">
       <div class="resume_profile">
@@ -18,8 +22,8 @@
       <div class="resume_content">
         <div class="resume_item resume_info">
           <div class="title">
-            <p class="bold">Francisco Jimenez</p>
-            <p class="regular">Desarrollador de Software</p>
+            <p class="bold">Francisco Javier Jimenez Cohen</p>
+            <p class="regular">Ingeniero de Software</p>
           </div>
           <ul>
             <li>
@@ -46,7 +50,15 @@
                 franjicohen@gmail.com
               </div>
             </li>
-
+            <li>
+              <div class="icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="data">
+                <p class="semi-bold">LinkedIn</p>
+                <p>www.linkedin.com/in/franciscojimenezcohen</p>
+              </div>
+            </li>
           </ul>
         </div>
 
@@ -78,7 +90,7 @@
                 <i class="fab fa-youtube"></i>
               </div>
               <div class="data">
-                <p class="semi-bold">Youtube</p>
+                <p class="semi-bold">YouTube</p>
                 <p>Midireccion@youtube</p>
               </div>
             </li>
@@ -87,21 +99,69 @@
                 <i class="fab fa-linkedin"></i>
               </div>
               <div class="data">
-                <p class="semi-bold">Linkedin</p>
+                <p class="semi-bold">LinkedIn</p>
                 <p>Midireccion@linkedin</p>
               </div>
             </li>
           </ul>
         </div>
+        
+        <div class="resume_item resume_skills">
+          <div class="title">
+            <p class="bold">Aptitudes principales</p>
+          </div>
+          <ul>
+            <li>NestJS</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+
+        <div class="resume_item resume_technologies">
+          <div class="title">
+            <p class="bold">Tecnologías que uso</p>
+          </div>
+          <ul>
+            <li>
+              <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Apache_kafka.svg" alt="Kafka" style="width: 35px; height: 35px;">
+              </div>
+              <div class="data">
+                Kafka (4 años de experiencia)
+              </div>
+            </li>
+            <li>
+              <div class="icon">
+                <img src="file-MW9ToJWkzpLyTt0I2KL1C1W7" alt="Docker" style="width: 35px; height: 35px;">
+              </div>
+              <div class="data">
+                Docker
+              </div>
+            </li>
+            <li>
+              <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git" style="width: 35px; height: 35px;">
+              </div>
+              <div class="data">
+                Git
+              </div>
+            </li>
+            <li>CI/CD</li>
+            <li>TypeORM</li>
+          </ul>
+        </div>
       </div>
     </div>
+
     <div class="resume_right">
       <div class="resume_item resume_about">
         <div class="title">
           <p class="bold">Acerca de Mi</p>
         </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa
-          officia totam atque exercitationem inventore repudiandae?</p>
+        <p>Soy un ingeniero de software con más de 8 años de experiencia en el desarrollo de soluciones tecnológicas para diversos sectores e industrias. Mi pasión es el código y la innovación, y me dedico a crear aplicaciones que aporten valor y satisfacción a los usuarios y clientes. Actualmente, trabajo como ingeniero de software en Acid Labs, una empresa líder en el diseño y desarrollo de productos digitales.</p>
+        <p>En Acid Labs, he participado en proyectos de alto impacto y complejidad, utilizando tecnologías de vanguardia como Node.js, NestJS, TypeORM, Kafka, Docker, Git y CI/CD. Entre ellos, destaco el desarrollo de una billetera virtual llamada Cencopay para Cencosud, uno de los mayores grupos de retail de Latinoamérica, donde integré APIs como Mambu y diseñé una arquitectura orientada a microservicios. Asimismo, fui arquitecto de software para el análisis y desarrollo de mejoras de un ERP para For Promotional Mexico, un cliente del sector publicitario, donde migré el sistema de tecnologías obsoletas a Java 11 y Spring. Además, he gestionado el sistema del marketplace y las implementaciones productivas para el equipo de Seller Management de Cencosud Chile, asegurando su correcto funcionamiento y optimizando los procesos.</p>
+        <p>Estas experiencias me han permitido desarrollar y demostrar mis competencias en el desarrollo de software backend, el diseño e integración de API REST, la creación y gestión de microservicios, el uso de brokers como Kafka, la implementación de contenedores con Docker, el control de versiones con Git y la automatización de pruebas y despliegues con CI/CD. Así, he podido entregar soluciones de calidad, escalables, seguras y eficientes, que cumplen con los requerimientos y expectativas de los clientes.</p>
+        <p>Mi formación académica también respalda mi trayectoria profesional, ya que cuento con un título de Tecnólogo en Análisis y Desarrollo de Sistemas de Información, una Diplomatura en Software Informático y Aplicaciones Multimedia, y una Especialización en Gestión y Diseño de Bases de Datos. Estos estudios me han proporcionado los conocimientos teóricos y prácticos necesarios para abordar los desafíos y oportunidades del sector tecnológico. Mi objetivo es seguir aprendiendo y creciendo como profesional, aportando mi talento y experiencia a proyectos que generen un impacto positivo en la sociedad y el medio ambiente.</p>
       </div>
       <div class="resume_item resume_work">
         <div class="title">
@@ -109,51 +169,136 @@
         </div>
         <ul>
           <li>
-            <div class="date">Inicio-Fin</div>
+            <div class="date">octubre de 2023 - mayo de 2024</div>
             <div class="info">
-              <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+              <p class="semi-bold">Ingeniero de software en Acid Labs</p>
+              <p>Contrato con Cencosud para el desarrollo de billetera virtual llamada cencopay, desarrollando backend para cashin y cashout integrando APIs como Mambu, orientado a microservicios usando broker como Kafka.</p>
             </div>
           </li>
           <li>
-            <div class="date">Inicio - Fin</div>
+            <div class="date">abril de 2023 - diciembre de 2023</div>
             <div class="info">
-              <p class="semi-bold">Lugar.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, officia quam nam laudantium sint
-                veniam tempora ratione soluta eum saepe qui, a autem, expedita eius! Mollitia aliquid atque officia
-                magni.</p>
+              <p class="semi-bold">Arquitecto de software de TI en Acid Labs</p>
+              <p>Arquitecto de Software para análisis y desarrollo de mejoras de ERP del cliente For Promotional Mexico, encargado de establecer arquitectura de software basada en microservicios, establecida sobre arquitectura de infraestructura interna, migrando ERP empresarial de tecnologías obsoletas a Java 11 y Spring, Docker, Git, Gitlab, CI/CD, y herramientas de monitoreo.</p>
             </div>
           </li>
           <li>
-            <div class="date">Inicio - Fin</div>
+            <div class="date">octubre de 2021 - abril de 2023</div>
             <div class="info">
-              <p class="semi-bold">Lugar.</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi adipisci ullam nesciunt illum
-                accusantium enim, labore sapiente est a beatae distinctio pariatur. Illum perferendis excepturi at ad
-                nobis ipsum similique!</p>
+              <p class="semi-bold">Desarrollador sénior en Acid Labs</p>
+              <p>Desarrollador senior, encargado de modificaciones y creaciones de módulos tanto para el frontend como para el backend del cliente Cencosud Chile. Gestión del sistema del marketplace, implementaciones productivas para el equipo de Seller Management, utilizando tecnologías como React.js, MySQL, AWS, Node.js, API REST, Docker, GitLab, Git y CI/CD.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">junio de 2022 - julio de 2022</div>
+            <div class="info">
+              <p class="semi-bold">Arquitecto y Consultor de Software en Academit s.a.s</p>
+              <p>Auditoria y presentación de propuestas de cambios de .net a Java 11 usando Spring Boot como framework.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">mayo de 2021 - marzo de 2022</div>
+            <div class="info">
+              <p class="semi-bold">Software Development Engineer Sr en Naranja X</p>
+              <p>Creación y modificación de servicios de backend para el área de home y account. Uso de tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git, contribuyendo a la creación de soluciones tecnológicas eficientes y escalables. Implementación de prácticas de CI/CD.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">mayo de 2021 - marzo de 2022</div>
+            <div class="info">
+              <p class="semi-bold">Responsable del Curso de Backend con NodeJs en Digital House</p>
+              <p>Encargado del curso de Node.js y Desarrollo web para Latinoamérica y Colombia. Enseñanza de fundamentos y mejores prácticas en el desarrollo web, utilizando tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">octubre de 2019 - mayo de 2021</div>
+            <div class="info">
+              <p class="semi-bold">Software Development Engineer en Santander Tecnología Argentina</p>
+              <p>Desarrollo y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF, WCF, Git, y migración de servicios a tecnologías más recientes como NodeJs, implementaciones con GitLab CI/CD.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">julio de 2018 - octubre de 2019</div>
+            <div class="info">
+              <p class="semi-bold">Desarrollador de software en Baufest</p>
+              <p>Creación y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF y WCF.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">diciembre de 2013 - agosto de 2017</div>
+            <div class="info">
+              <p class="semi-bold">Analista sénior en Bureau Veritas</p>
+              <p>Análisis de datos relacionados a la calidad de los hidrocarburos, seguimientos de datos de continuidad suministrados por el sistema ESCADA y los informes de laboratorios, creación de aplicaciones para el cálculo volumétrico del llenado de tanques de tierra.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">mayo de 2013 - diciembre de 2013</div>
+            <div class="info">
+              <p class="semi-bold">Analista en Intertek</p>
+              <p>Desarrollo de métodos y soluciones para la parametrización de medidas y cálculos para tanques y operaciones de transferencias para un cliente en Zona Franca Barranquilla.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">octubre de 2012 - mayo de 2013</div>
+            <div class="info">
+              <p class="semi-bold">Analista auxiliar en Camin Cargo Control Group</p>
+              <p>Ingresos, análisis de datos de bases de datos, alta, baja, modificaciones de datos referentes a la operación de cargue y descargue de químicos del sector de los hidrocarburos.</p>
             </div>
           </li>
         </ul>
       </div>
       <div class="resume_item resume_education">
         <div class="title">
-          <p class="bold">Education</p>
+          <p class="bold">Educación</p>
         </div>
         <ul>
           <li>
-            <div class="date">2020</div>
+            <div class="date">2019</div>
             <div class="info">
-              <p class="semi-bold">Institución</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+              <p class="semi-bold">Servicio Nacional de Aprendizaje (SENA)</p>
+              <p>Especialización en Gestión y Diseño de Bases de Datos, Ingeniería informática</p>
             </div>
           </li>
           <li>
             <div class="date">2020</div>
             <div class="info">
-              <p class="semi-bold">Institución</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+              <p class="semi-bold">Politécnico Grancolombiano</p>
+              <p>Ingeniería de Software</p>
             </div>
           </li>
+          <li>
+            <div class="date">2018 - 2019</div>
+            <div class="info">
+              <p class="semi-bold">EducacionIT</p>
+              <p>Diplomatura en Software Informático y Aplicaciones Multimedia</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">2015 - 2017</div>
+            <div class="info">
+              <p class="semi-bold">Servicio Nacional de Aprendizaje (SENA)</p>
+              <p>Tecnologo en Tecnología informática/Tecnología de sistemas informáticos</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">2008 - 2010</div>
+            <div class="info">
+              <p class="semi-bold">Universidad Autónoma del Caribe</p>
+              <p>Ingeniería eléctrica, electrónica y de comunicaciones</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="resume_item resume_certifications">
+        <div class="title">
+          <p class="bold">Certificaciones</p>
+        </div>
+        <ul>
+          <li>Node.js avanzado</li>
+          <li>Tecnologo en Análisis y Desarrollo de Sistemas de Información</li>
+          <li>Node.js</li>
+          <li>Git going fast</li>
+          <li>Unit Testing and Test Driven Development in NodeJs</li>
         </ul>
       </div>
     </div>

@@ -13,6 +13,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   color: #555555;
+  overflow-x: hidden;
 }
 
 .bold {
@@ -26,26 +27,55 @@ body {
   font-size: 16px;
 }
 
+.download-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.download-button button {
+  background-color: #2b2e33;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-button button:hover {
+  background-color: #1a1c1f;
+  transform: scale(1.05);
+}
+
 .resume {
-  width: 800px;
+  width: 900px;
   height: auto;
   display: flex;
-  margin: 50px auto;
+  margin: 80px auto 50px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .resume .resume_left {
-  width: 280px;
-  background: #413c34;
+  width: 300px;
+  background: #2b2e33;
+  padding: 20px;
 }
 
 .resume .resume_left .resume_profile {
   width: 100%;
   height: 280px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .resume .resume_left .resume_profile img {
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
 }
 
 .resume .resume_left .resume_content {
@@ -56,22 +86,19 @@ body {
   margin-bottom: 20px;
 }
 
-.resume .resume_left .bold {
-  color: #fff;
-}
-
+.resume .resume_left .bold, 
 .resume .resume_left .regular {
   color: #fff;
 }
 
 .resume .resume_item {
   padding: 25px 0;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #555;
 }
 
 .resume .resume_left .resume_item:last-child,
 .resume .resume_right .resume_item:last-child {
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 
 .resume .resume_left ul li {
@@ -88,11 +115,18 @@ body {
   width: 35px;
   height: 35px;
   background: #fff;
-  color: #000000;
+  color: #000;
   border-radius: 50%;
   margin-right: 15px;
   font-size: 16px;
   position: relative;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.resume .resume_left ul li .icon:hover {
+  background: #000;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 .resume .icon i,
@@ -116,30 +150,26 @@ body {
 }
 
 .resume .resume_left .resume_skills ul li .skill_name {
-  width: 25%;
+  width: 60%;
 }
-
-
 
 .resume .resume_left .resume_skills ul li .skill_per {
-  width: 15%;
+  width: 40%;
 }
 
-
-
 .resume .resume_left .resume_social .semi-bold {
-  color: rgb(10, 8, 8);
+  color: #fff;
   margin-bottom: 3px;
 }
 
 .resume .resume_right {
-  width: 520px;
+  width: 600px;
   background: #fff;
-  padding: 25px;
+  padding: 30px;
 }
 
 .resume .resume_right .bold {
-  color: #000000;
+  color: #000;
 }
 
 .resume .resume_right .resume_work ul,
@@ -175,7 +205,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  border: 2px solid #070707;
+  border: 2px solid #000;
 }
 
 .resume .resume_right .resume_work ul li:after,
@@ -186,7 +216,7 @@ body {
   left: -21px;
   width: 2px;
   height: 115px;
-  background: #070707;
+  background: #000;
 }
 
 .resume .resume_right .resume_hobby ul {
@@ -201,6 +231,13 @@ body {
   border-radius: 50%;
   position: relative;
   color: #0bb5f4;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.resume .resume_right .resume_hobby ul li:hover {
+  background: #0bb5f4;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 .resume .resume_right .resume_hobby ul li i {
@@ -219,4 +256,29 @@ body {
 
 .resume .resume_right .resume_hobby ul li:last-child:before {
   display: none;
+}
+
+.resume .resume_left .resume_technologies {
+  margin-top: 20px;
+}
+
+.resume .resume_left .resume_technologies ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.resume .resume_left .resume_technologies ul li:hover {
+  transform: scale(1.05);
+}
+
+.resume .resume_left .resume_technologies ul li .icon img {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+
+.resume .resume_left .resume_technologies ul li .data {
+  color: #ffffff;
 }
