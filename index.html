@@ -62,92 +62,66 @@
           </ul>
         </div>
 
-        <div class="resume_item resume_social">
-          <div class="title">
-            <p class="bold">Social</p>
-          </div>
-          <ul>
-            <li>
-              <div class="icon">
-                <i class="fab fa-facebook-square"></i>
-              </div>
-              <div class="data">
-                <p class="semi-bold">Facebook</p>
-                <p>MiDireccion@facebook</p>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <i class="fab fa-twitter-square"></i>
-              </div>
-              <div class="data">
-                <p class="semi-bold">Twitter</p>
-                <p>Midireccion@twitter</p>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <i class="fab fa-youtube"></i>
-              </div>
-              <div class="data">
-                <p class="semi-bold">YouTube</p>
-                <p>Midireccion@youtube</p>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <i class="fab fa-linkedin"></i>
-              </div>
-              <div class="data">
-                <p class="semi-bold">LinkedIn</p>
-                <p>Midireccion@linkedin</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        
         <div class="resume_item resume_skills">
           <div class="title">
             <p class="bold">Aptitudes principales</p>
           </div>
           <ul>
-            <li>NestJS</li>
-            <li>React.js</li>
-            <li>Node.js</li>
+            <li onclick="highlightExperience('java')">Java</li>
+            <li onclick="highlightExperience('typescript')">TypeScript</li>
+            <li onclick="highlightExperience('csharp')">C#</li>
+            <li onclick="highlightExperience('javascript')">JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="resume_item resume_frameworks">
+          <div class="title">
+            <p class="bold">Frameworks y Librerías</p>
+          </div>
+          <ul>
+            <li onclick="highlightExperience('nestjs')">NestJS</li>
+            <li onclick="highlightExperience('reactjs')">ReactJS</li>
+            <li onclick="highlightExperience('expressjs')">ExpressJS</li>
+            <li onclick="highlightExperience('netcore')">.NET Core</li>
+            <li onclick="highlightExperience('netframework')">.NET Framework</li>
           </ul>
         </div>
 
         <div class="resume_item resume_technologies">
           <div class="title">
-            <p class="bold">Tecnologías que uso</p>
+            <p class="bold">Tecnologías</p>
           </div>
           <ul>
-            <li>
-              <div class="icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Apache_kafka.svg" alt="Kafka" style="width: 35px; height: 35px;">
-              </div>
-              <div class="data">
-                Kafka (4 años de experiencia)
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="file-MW9ToJWkzpLyTt0I2KL1C1W7" alt="Docker" style="width: 35px; height: 35px;">
-              </div>
-              <div class="data">
-                Docker
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git" style="width: 35px; height: 35px;">
-              </div>
-              <div class="data">
-                Git
-              </div>
-            </li>
-            <li>CI/CD</li>
-            <li>TypeORM</li>
+            <li onclick="highlightExperience('git')">Git</li>
+            <li onclick="highlightExperience('gitlab')">GitLab</li>
+            <li onclick="highlightExperience('github')">GitHub</li>
+            <li onclick="highlightExperience('kubernetes')">Kubernetes</li>
+            <li onclick="highlightExperience('kafka')">Kafka (4 años de experiencia)</li>
+          </ul>
+        </div>
+
+        <div class="resume_item resume_cloud">
+          <div class="title">
+            <p class="bold">Nubes</p>
+          </div>
+          <ul>
+            <li onclick="highlightExperience('aws')">AWS</li>
+            <li onclick="highlightExperience('gcp')">GCP</li>
+          </ul>
+        </div>
+
+        <div class="resume_item resume_databases">
+          <div class="title">
+            <p class="bold">Bases de Datos</p>
+          </div>
+          <ul>
+            <li onclick="highlightExperience('oracle')">Oracle con PLSQL</li>
+            <li onclick="highlightExperience('sqlserver')">SQL Server con Transact-SQL</li>
+            <li onclick="highlightExperience('postgres')">Postgres</li>
+            <li onclick="highlightExperience('mysql')">MySQL</li>
+            <li onclick="highlightExperience('dynamodb')">DynamoDB</li>
+            <li onclick="highlightExperience('mongodb')">MongoDB</li>
+            <li onclick="highlightExperience('redis')">Redis</li>
           </ul>
         </div>
       </div>
@@ -168,77 +142,77 @@
           <p class="bold">Experiencia de Trabajo</p>
         </div>
         <ul>
-          <li>
+          <li class="experience-item git kafka aws">
             <div class="date">octubre de 2023 - mayo de 2024</div>
             <div class="info">
               <p class="semi-bold">Ingeniero de software en Acid Labs</p>
               <p>Contrato con Cencosud para el desarrollo de billetera virtual llamada cencopay, desarrollando backend para cashin y cashout integrando APIs como Mambu, orientado a microservicios usando broker como Kafka.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git java spring docker kubernetes">
             <div class="date">abril de 2023 - diciembre de 2023</div>
             <div class="info">
               <p class="semi-bold">Arquitecto de software de TI en Acid Labs</p>
               <p>Arquitecto de Software para análisis y desarrollo de mejoras de ERP del cliente For Promotional Mexico, encargado de establecer arquitectura de software basada en microservicios, establecida sobre arquitectura de infraestructura interna, migrando ERP empresarial de tecnologías obsoletas a Java 11 y Spring, Docker, Git, Gitlab, CI/CD, y herramientas de monitoreo.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git reactjs mysql aws nodejs api-rest docker gitlab ci-cd">
             <div class="date">octubre de 2021 - abril de 2023</div>
             <div class="info">
               <p class="semi-bold">Desarrollador sénior en Acid Labs</p>
               <p>Desarrollador senior, encargado de modificaciones y creaciones de módulos tanto para el frontend como para el backend del cliente Cencosud Chile. Gestión del sistema del marketplace, implementaciones productivas para el equipo de Seller Management, utilizando tecnologías como React.js, MySQL, AWS, Node.js, API REST, Docker, GitLab, Git y CI/CD.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git java spring">
             <div class="date">junio de 2022 - julio de 2022</div>
             <div class="info">
               <p class="semi-bold">Arquitecto y Consultor de Software en Academit s.a.s</p>
               <p>Auditoria y presentación de propuestas de cambios de .net a Java 11 usando Spring Boot como framework.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git mysql aws nodejs api-rest docker gitlab ci-cd">
             <div class="date">mayo de 2021 - marzo de 2022</div>
             <div class="info">
               <p class="semi-bold">Software Development Engineer Sr en Naranja X</p>
               <p>Creación y modificación de servicios de backend para el área de home y account. Uso de tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git, contribuyendo a la creación de soluciones tecnológicas eficientes y escalables. Implementación de prácticas de CI/CD.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git nodejs mysql aws api-rest docker gitlab">
             <div class="date">mayo de 2021 - marzo de 2022</div>
             <div class="info">
               <p class="semi-bold">Responsable del Curso de Backend con NodeJs en Digital House</p>
               <p>Encargado del curso de Node.js y Desarrollo web para Latinoamérica y Colombia. Enseñanza de fundamentos y mejores prácticas en el desarrollo web, utilizando tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git oracle dotnet nodejs gitlab ci-cd">
             <div class="date">octubre de 2019 - mayo de 2021</div>
             <div class="info">
               <p class="semi-bold">Software Development Engineer en Santander Tecnología Argentina</p>
               <p>Desarrollo y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF, WCF, Git, y migración de servicios a tecnologías más recientes como NodeJs, implementaciones con GitLab CI/CD.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git oracle dotnet">
             <div class="date">julio de 2018 - octubre de 2019</div>
             <div class="info">
               <p class="semi-bold">Desarrollador de software en Baufest</p>
               <p>Creación y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF y WCF.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git oracle">
             <div class="date">diciembre de 2013 - agosto de 2017</div>
             <div class="info">
               <p class="semi-bold">Analista sénior en Bureau Veritas</p>
               <p>Análisis de datos relacionados a la calidad de los hidrocarburos, seguimientos de datos de continuidad suministrados por el sistema ESCADA y los informes de laboratorios, creación de aplicaciones para el cálculo volumétrico del llenado de tanques de tierra.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git oracle dotnet">
             <div class="date">mayo de 2013 - diciembre de 2013</div>
             <div class="info">
               <p class="semi-bold">Analista en Intertek</p>
               <p>Desarrollo de métodos y soluciones para la parametrización de medidas y cálculos para tanques y operaciones de transferencias para un cliente en Zona Franca Barranquilla.</p>
             </div>
           </li>
-          <li>
+          <li class="experience-item git mysql oracle dotnet">
             <div class="date">octubre de 2012 - mayo de 2013</div>
             <div class="info">
               <p class="semi-bold">Analista auxiliar en Camin Cargo Control Group</p>
@@ -303,6 +277,17 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function highlightExperience(technology) {
+      document.querySelectorAll('.experience-item').forEach(item => {
+        item.classList.remove('highlight');
+      });
+      document.querySelectorAll('.experience-item.' + technology).forEach(item => {
+        item.classList.add('highlight');
+      });
+    }
+  </script>
 
 </body>
 

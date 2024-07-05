@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
 
 * {
@@ -9,10 +10,10 @@
 }
 
 body {
-  background: #585c68;
+  background: #2e3b4e;
   font-size: 14px;
   line-height: 22px;
-  color: #555555;
+  color: #d9d9d9;
   overflow-x: hidden;
 }
 
@@ -34,7 +35,7 @@ body {
 }
 
 .download-button button {
-  background-color: #2b2e33;
+  background-color: #5A67D8;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -44,23 +45,25 @@ body {
 }
 
 .download-button button:hover {
-  background-color: #1a1c1f;
+  background-color: #434190;
   transform: scale(1.05);
 }
 
 .resume {
-  width: 900px;
+  width: 1100px;
   height: auto;
   display: flex;
   margin: 80px auto 50px;
-  border: 2px solid #000;
+  background: #1e293b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .resume .resume_left {
-  width: 300px;
-  background: #2b2e33;
+  width: 35%;
+  background: #3b82f6;
+  color: white;
   padding: 20px;
 }
 
@@ -75,10 +78,12 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: 5px solid white;
 }
 
-.resume .resume_left .resume_content {
+.resume .resume_left
+
+ .resume_content {
   padding: 0 25px;
 }
 
@@ -86,14 +91,9 @@ body {
   margin-bottom: 20px;
 }
 
-.resume .resume_left .bold, 
-.resume .resume_left .regular {
-  color: #fff;
-}
-
 .resume .resume_item {
   padding: 25px 0;
-  border-bottom: 2px solid #555;
+  border-bottom: 2px solid #2563eb;
 }
 
 .resume .resume_left .resume_item:last-child,
@@ -105,6 +105,13 @@ body {
   display: flex;
   margin-bottom: 10px;
   align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.resume .resume_left ul li:hover {
+  background: #2563eb;
+  transform: scale(1.05);
 }
 
 .resume .resume_left ul li:last-child {
@@ -114,8 +121,8 @@ body {
 .resume .resume_left ul li .icon {
   width: 35px;
   height: 35px;
-  background: #fff;
-  color: #000;
+  background: white;
+  color: #3b82f6;
   border-radius: 50%;
   margin-right: 15px;
   font-size: 16px;
@@ -124,8 +131,8 @@ body {
 }
 
 .resume .resume_left ul li .icon:hover {
-  background: #000;
-  color: #fff;
+  background: #2563eb;
+  color: white;
   transform: scale(1.1);
 }
 
@@ -137,39 +144,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.resume .resume_left ul li .data {
-  color: #ffffff;
-}
-
-.resume .resume_left .resume_skills ul li {
-  display: flex;
-  margin-bottom: 10px;
-  color: #ffffff;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.resume .resume_left .resume_skills ul li .skill_name {
-  width: 60%;
-}
-
-.resume .resume_left .resume_skills ul li .skill_per {
-  width: 40%;
-}
-
-.resume .resume_left .resume_social .semi-bold {
-  color: #fff;
-  margin-bottom: 3px;
-}
-
 .resume .resume_right {
-  width: 600px;
-  background: #fff;
+  width: 65%;
+  background: #1e293b;
   padding: 30px;
 }
 
 .resume .resume_right .bold {
-  color: #000;
+  color: #3b82f6;
 }
 
 .resume .resume_right .resume_work ul,
@@ -180,6 +162,7 @@ body {
 
 .resume .resume_right ul li {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .resume .resume_right ul li .date {
@@ -205,7 +188,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid #3b82f6;
 }
 
 .resume .resume_right .resume_work ul li:after,
@@ -216,7 +199,7 @@ body {
   left: -21px;
   width: 2px;
   height: 115px;
-  background: #000;
+  background: #3b82f6;
 }
 
 .resume .resume_right .resume_hobby ul {
@@ -227,16 +210,16 @@ body {
 .resume .resume_right .resume_hobby ul li {
   width: 80px;
   height: 80px;
-  border: 2px solid #0bb5f4;
+  border: 2px solid #3b82f6;
   border-radius: 50%;
   position: relative;
-  color: #0bb5f4;
+  color: #3b82f6;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .resume .resume_right .resume_hobby ul li:hover {
-  background: #0bb5f4;
-  color: #fff;
+  background: #3b82f6;
+  color: white;
   transform: scale(1.1);
 }
 
@@ -251,7 +234,7 @@ body {
   right: -52px;
   width: 50px;
   height: 2px;
-  background: #0bb5f4;
+  background: #3b82f6;
 }
 
 .resume .resume_right .resume_hobby ul li:last-child:before {
@@ -280,5 +263,12 @@ body {
 }
 
 .resume .resume_left .resume_technologies ul li .data {
-  color: #ffffff;
+  color: white;
+}
+
+.highlight {
+  background: #4338ca;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
 }
