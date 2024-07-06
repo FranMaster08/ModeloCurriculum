@@ -9,10 +9,22 @@
 </head>
 
 <body>
+  <div class="opciones-page">
+    <div class="language-select">
+      <label for="language">Select Language: </label>
+      <select id="language" onchange="changeLanguage()">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </div>
+  
+    <div class="download-button">
+      <button onclick="window.print()">Descargar CV en PDF</button>
+    </div>
 
-  <div class="download-button">
-    <button onclick="window.print()">Descargar CV en PDF</button>
   </div>
+
 
   <div class="resume">
     <div class="resume_left">
@@ -22,33 +34,27 @@
       <div class="resume_content">
         <div class="resume_item resume_info">
           <div class="title">
-            <p class="bold">Francisco Javier Jimenez Cohen</p>
-            <p class="regular">Ingeniero de Software</p>
+            <p class="bold" data-key="name">Francisco Javier Jimenez Cohen</p>
+            <p class="regular" data-key="job">Ingeniero de Software</p>
           </div>
           <ul>
             <li>
               <div class="icon">
                 <i class="fas fa-map-signs"></i>
               </div>
-              <div class="data">
-                Buenos Aires, Argentina
-              </div>
+              <div class="data" data-key="location">Buenos Aires, Argentina</div>
             </li>
             <li>
               <div class="icon">
                 <i class="fas fa-mobile-alt"></i>
               </div>
-              <div class="data">
-                +541163069305
-              </div>
+              <div class="data" data-key="phone">+541163069305</div>
             </li>
             <li>
               <div class="icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <div class="data">
-                franjicohen@gmail.com
-              </div>
+              <div class="data" data-key="email">franjicohen@gmail.com</div>
             </li>
             <li>
               <div class="icon">
@@ -64,7 +70,7 @@
 
         <div class="resume_item resume_skills">
           <div class="title">
-            <p class="bold">Aptitudes principales</p>
+            <p class="bold" data-key="skills">Aptitudes principales</p>
           </div>
           <ul>
             <li onclick="highlightExperience('java')">Java</li>
@@ -76,7 +82,7 @@
 
         <div class="resume_item resume_frameworks">
           <div class="title">
-            <p class="bold">Frameworks y Librerías</p>
+            <p class="bold" data-key="frameworks">Frameworks y Librerías</p>
           </div>
           <ul>
             <li onclick="highlightExperience('nestjs')">NestJS</li>
@@ -89,7 +95,7 @@
 
         <div class="resume_item resume_technologies">
           <div class="title">
-            <p class="bold">Tecnologías</p>
+            <p class="bold" data-key="technologies">Tecnologías</p>
           </div>
           <ul>
             <li onclick="highlightExperience('git')">Git</li>
@@ -102,7 +108,7 @@
 
         <div class="resume_item resume_cloud">
           <div class="title">
-            <p class="bold">Nubes</p>
+            <p class="bold" data-key="cloud">Nubes</p>
           </div>
           <ul>
             <li onclick="highlightExperience('aws')">AWS</li>
@@ -112,7 +118,7 @@
 
         <div class="resume_item resume_databases">
           <div class="title">
-            <p class="bold">Bases de Datos</p>
+            <p class="bold" data-key="databases">Bases de Datos</p>
           </div>
           <ul>
             <li onclick="highlightExperience('oracle')">Oracle con PLSQL</li>
@@ -130,155 +136,339 @@
     <div class="resume_right">
       <div class="resume_item resume_about">
         <div class="title">
-          <p class="bold">Acerca de Mi</p>
+          <p class="bold" data-key="about">Acerca de Mi</p>
         </div>
-        <p>Soy un ingeniero de software con más de 8 años de experiencia en el desarrollo de soluciones tecnológicas para diversos sectores e industrias. Mi pasión es el código y la innovación, y me dedico a crear aplicaciones que aporten valor y satisfacción a los usuarios y clientes. Actualmente, trabajo como ingeniero de software en Acid Labs, una empresa líder en el diseño y desarrollo de productos digitales.</p>
-        <p>En Acid Labs, he participado en proyectos de alto impacto y complejidad, utilizando tecnologías de vanguardia como Node.js, NestJS, TypeORM, Kafka, Docker, Git y CI/CD. Entre ellos, destaco el desarrollo de una billetera virtual llamada Cencopay para Cencosud, uno de los mayores grupos de retail de Latinoamérica, donde integré APIs como Mambu y diseñé una arquitectura orientada a microservicios. Asimismo, fui arquitecto de software para el análisis y desarrollo de mejoras de un ERP para For Promotional Mexico, un cliente del sector publicitario, donde migré el sistema de tecnologías obsoletas a Java 11 y Spring. Además, he gestionado el sistema del marketplace y las implementaciones productivas para el equipo de Seller Management de Cencosud Chile, asegurando su correcto funcionamiento y optimizando los procesos.</p>
-        <p>Estas experiencias me han permitido desarrollar y demostrar mis competencias en el desarrollo de software backend, el diseño e integración de API REST, la creación y gestión de microservicios, el uso de brokers como Kafka, la implementación de contenedores con Docker, el control de versiones con Git y la automatización de pruebas y despliegues con CI/CD. Así, he podido entregar soluciones de calidad, escalables, seguras y eficientes, que cumplen con los requerimientos y expectativas de los clientes.</p>
-        <p>Mi formación académica también respalda mi trayectoria profesional, ya que cuento con un título de Tecnólogo en Análisis y Desarrollo de Sistemas de Información, una Diplomatura en Software Informático y Aplicaciones Multimedia, y una Especialización en Gestión y Diseño de Bases de Datos. Estos estudios me han proporcionado los conocimientos teóricos y prácticos necesarios para abordar los desafíos y oportunidades del sector tecnológico. Mi objetivo es seguir aprendiendo y creciendo como profesional, aportando mi talento y experiencia a proyectos que generen un impacto positivo en la sociedad y el medio ambiente.</p>
+        <p data-key="aboutDesc">Soy un ingeniero de software con más de 8 años de experiencia en el desarrollo de soluciones tecnológicas para diversos sectores e industrias. Mi pasión es el código y la innovación, y me dedico a crear aplicaciones que aporten valor y satisfacción a los usuarios y clientes. Actualmente, trabajo como ingeniero de software en Acid Labs, una empresa líder en el diseño y desarrollo de productos digitales.</p>
+        <p data-key="aboutDesc2">En Acid Labs, he participado en proyectos de alto impacto y complejidad, utilizando tecnologías de vanguardia como Node.js, NestJS, TypeORM, Kafka, Docker, Git y CI/CD. Entre ellos, destaco el desarrollo de una billetera virtual llamada Cencopay para Cencosud, uno de los mayores grupos de retail de Latinoamérica, donde integré APIs como Mambu y diseñé una arquitectura orientada a microservicios. Asimismo, fui arquitecto de software para el análisis y desarrollo de mejoras de un ERP para For Promotional Mexico, un cliente del sector publicitario, donde migré el sistema de tecnologías obsoletas a Java 11 y Spring. Además, he gestionado el sistema del marketplace y las implementaciones productivas para el equipo de Seller Management de Cencosud Chile, asegurando su correcto funcionamiento y optimizando los procesos.</p>
+        <p data-key="aboutDesc3">Estas experiencias me han permitido desarrollar y demostrar mis competencias en el desarrollo de software backend, el diseño e integración de API REST, la creación y gestión de microservicios, el uso de brokers como Kafka, la implementación de contenedores con Docker, el control de versiones con Git y la automatización de pruebas y despliegues con CI/CD. Así, he podido entregar soluciones de calidad, escalables, seguras y eficientes, que cumplen con los requerimientos y expectativas de los clientes.</p>
+        <p data-key="aboutDesc4">Mi formación académica también respalda mi trayectoria profesional, ya que cuento con un título de Tecnólogo en Análisis y Desarrollo de Sistemas de Información, una Diplomatura en Software Informático y Aplicaciones Multimedia, y una Especialización en Gestión y Diseño de Bases de Datos. Estos estudios me han proporcionado los conocimientos teóricos y prácticos necesarios para abordar los desafíos y oportunidades del sector tecnológico. Mi objetivo es seguir aprendiendo y creciendo como profesional, aportando mi talento y experiencia a proyectos que generen un impacto positivo en la sociedad y el medio ambiente.</p>
       </div>
       <div class="resume_item resume_work">
         <div class="title">
-          <p class="bold">Experiencia de Trabajo</p>
+          <p class="bold" data-key="work">Experiencia de Trabajo</p>
         </div>
         <ul>
           <li class="experience-item git kafka aws">
             <div class="date">octubre de 2023 - mayo de 2024</div>
             <div class="info">
-              <p class="semi-bold">Ingeniero de software en Acid Labs</p>
-              <p>Contrato con Cencosud para el desarrollo de billetera virtual llamada cencopay, desarrollando backend para cashin y cashout integrando APIs como Mambu, orientado a microservicios usando broker como Kafka.</p>
+              <p class="semi-bold" data-key="job1">Ingeniero de software en Acid Labs</p>
+              <p data-key="jobDesc1">Contrato con Cencosud para el desarrollo de billetera virtual llamada cencopay, desarrollando backend para cashin y cashout integrando APIs como Mambu, orientado a microservicios usando broker como Kafka.</p>
             </div>
           </li>
           <li class="experience-item git java spring docker kubernetes">
             <div class="date">abril de 2023 - diciembre de 2023</div>
             <div class="info">
-              <p class="semi-bold">Arquitecto de software de TI en Acid Labs</p>
-              <p>Arquitecto de Software para análisis y desarrollo de mejoras de ERP del cliente For Promotional Mexico, encargado de establecer arquitectura de software basada en microservicios, establecida sobre arquitectura de infraestructura interna, migrando ERP empresarial de tecnologías obsoletas a Java 11 y Spring, Docker, Git, Gitlab, CI/CD, y herramientas de monitoreo.</p>
+              <p class="semi-bold" data-key="job2">Arquitecto de software de TI en Acid Labs</p>
+              <p data-key="jobDesc2">Arquitecto de Software para análisis y desarrollo de mejoras de ERP del cliente For Promotional Mexico, encargado de establecer arquitectura de software basada en microservicios, establecida sobre arquitectura de infraestructura interna, migrando ERP empresarial de tecnologías obsoletas a Java 11 y Spring, Docker, Git, Gitlab, CI/CD, y herramientas de monitoreo.</p>
             </div>
           </li>
           <li class="experience-item git reactjs mysql aws nodejs api-rest docker gitlab ci-cd">
             <div class="date">octubre de 2021 - abril de 2023</div>
             <div class="info">
-              <p class="semi-bold">Desarrollador sénior en Acid Labs</p>
-              <p>Desarrollador senior, encargado de modificaciones y creaciones de módulos tanto para el frontend como para el backend del cliente Cencosud Chile. Gestión del sistema del marketplace, implementaciones productivas para el equipo de Seller Management, utilizando tecnologías como React.js, MySQL, AWS, Node.js, API REST, Docker, GitLab, Git y CI/CD.</p>
+              <p class="semi-bold" data-key="job3">Desarrollador sénior en Acid Labs</p>
+              <p data-key="jobDesc3">Desarrollador senior, encargado de modificaciones y creaciones de módulos tanto para el frontend como para el backend del cliente Cencosud Chile. Gestión del sistema del marketplace, implementaciones productivas para el equipo de Seller Management, utilizando tecnologías como React.js, MySQL, AWS, Node.js, API REST, Docker, GitLab, Git y CI/CD.</p>
             </div>
           </li>
           <li class="experience-item git java spring">
             <div class="date">junio de 2022 - julio de 2022</div>
             <div class="info">
-              <p class="semi-bold">Arquitecto y Consultor de Software en Academit s.a.s</p>
-              <p>Auditoria y presentación de propuestas de cambios de .net a Java 11 usando Spring Boot como framework.</p>
+              <p class="semi-bold" data-key="job4">Arquitecto y Consultor de Software en Academit s.a.s</p>
+              <p data-key="jobDesc4">Auditoria y presentación de propuestas de cambios de .net a Java 11 usando Spring Boot como framework.</p>
             </div>
           </li>
           <li class="experience-item git mysql aws nodejs api-rest docker gitlab ci-cd">
             <div class="date">mayo de 2021 - marzo de 2022</div>
             <div class="info">
-              <p class="semi-bold">Software Development Engineer Sr en Naranja X</p>
-              <p>Creación y modificación de servicios de backend para el área de home y account. Uso de tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git, contribuyendo a la creación de soluciones tecnológicas eficientes y escalables. Implementación de prácticas de CI/CD.</p>
+              <p class="semi-bold" data-key="job5">Software Development Engineer Sr en Naranja X</p>
+              <p data-key="jobDesc5">Creación y modificación de servicios de backend para el área de home y account. Uso de tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git, contribuyendo a la creación de soluciones tecnológicas eficientes y escalables. Implementación de prácticas de CI/CD.</p>
             </div>
           </li>
           <li class="experience-item git nodejs mysql aws api-rest docker gitlab">
             <div class="date">mayo de 2021 - marzo de 2022</div>
             <div class="info">
-              <p class="semi-bold">Responsable del Curso de Backend con NodeJs en Digital House</p>
-              <p>Encargado del curso de Node.js y Desarrollo web para Latinoamérica y Colombia. Enseñanza de fundamentos y mejores prácticas en el desarrollo web, utilizando tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git.</p>
+              <p class="semi-bold" data-key="job6">Responsable del Curso de Backend con NodeJs en Digital House</p>
+              <p data-key="jobDesc6">Encargado del curso de Node.js y Desarrollo web para Latinoamérica y Colombia. Enseñanza de fundamentos y mejores prácticas en el desarrollo web, utilizando tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git.</p>
             </div>
           </li>
           <li class="experience-item git oracle dotnet nodejs gitlab ci-cd">
             <div class="date">octubre de 2019 - mayo de 2021</div>
             <div class="info">
-              <p class="semi-bold">Software Development Engineer en Santander Tecnología Argentina</p>
-              <p>Desarrollo y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF, WCF, Git, y migración de servicios a tecnologías más recientes como NodeJs, implementaciones con GitLab CI/CD.</p>
+              <p class="semi-bold" data-key="job7">Software Development Engineer en Santander Tecnología Argentina</p>
+              <p data-key="jobDesc7">Desarrollo y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF, WCF, Git, y migración de servicios a tecnologías más recientes como NodeJs, implementaciones con GitLab CI/CD.</p>
             </div>
           </li>
           <li class="experience-item git oracle dotnet">
             <div class="date">julio de 2018 - octubre de 2019</div>
             <div class="info">
-              <p class="semi-bold">Desarrollador de software en Baufest</p>
-              <p>Creación y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF y WCF.</p>
+              <p class="semi-bold" data-key="job8">Desarrollador de software en Baufest</p>
+              <p data-key="jobDesc8">Creación y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF y WCF.</p>
             </div>
           </li>
           <li class="experience-item git oracle">
             <div class="date">diciembre de 2013 - agosto de 2017</div>
             <div class="info">
-              <p class="semi-bold">Analista sénior en Bureau Veritas</p>
-              <p>Análisis de datos relacionados a la calidad de los hidrocarburos, seguimientos de datos de continuidad suministrados por el sistema ESCADA y los informes de laboratorios, creación de aplicaciones para el cálculo volumétrico del llenado de tanques de tierra.</p>
+              <p class="semi-bold" data-key="job9">Analista sénior en Bureau Veritas</p>
+              <p data-key="jobDesc9">Análisis de datos relacionados a la calidad de los hidrocarburos, seguimientos de datos de continuidad suministrados por el sistema ESCADA y los informes de laboratorios, creación de aplicaciones para el cálculo volumétrico del llenado de tanques de tierra.</p>
             </div>
           </li>
           <li class="experience-item git oracle dotnet">
             <div class="date">mayo de 2013 - diciembre de 2013</div>
             <div class="info">
-              <p class="semi-bold">Analista en Intertek</p>
-              <p>Desarrollo de métodos y soluciones para la parametrización de medidas y cálculos para tanques y operaciones de transferencias para un cliente en Zona Franca Barranquilla.</p>
+              <p class="semi-bold" data-key="job10">Analista en Intertek</p>
+              <p data-key="jobDesc10">Desarrollo de métodos y soluciones para la parametrización de medidas y cálculos para tanques y operaciones de transferencias para un cliente en Zona Franca Barranquilla.</p>
             </div>
           </li>
           <li class="experience-item git mysql oracle dotnet">
             <div class="date">octubre de 2012 - mayo de 2013</div>
             <div class="info">
-              <p class="semi-bold">Analista auxiliar en Camin Cargo Control Group</p>
-              <p>Ingresos, análisis de datos de bases de datos, alta, baja, modificaciones de datos referentes a la operación de cargue y descargue de químicos del sector de los hidrocarburos.</p>
+              <p class="semi-bold" data-key="job11">Analista auxiliar en Camin Cargo Control Group</p>
+              <p data-key="jobDesc11">Ingresos, análisis de datos de bases de datos, alta, baja, modificaciones de datos referentes a la operación de cargue y descargue de químicos del sector de los hidrocarburos.</p>
             </div>
           </li>
         </ul>
       </div>
       <div class="resume_item resume_education">
         <div class="title">
-          <p class="bold">Educación</p>
+          <p class="bold" data-key="education">Educación</p>
         </div>
         <ul>
           <li>
             <div class="date">2019</div>
             <div class="info">
-              <p class="semi-bold">Servicio Nacional de Aprendizaje (SENA)</p>
-              <p>Especialización en Gestión y Diseño de Bases de Datos, Ingeniería informática</p>
+              <p class="semi-bold" data-key="education1">Servicio Nacional de Aprendizaje (SENA)</p>
+              <p data-key="educationDesc1">Especialización en Gestión y Diseño de Bases de Datos, Ingeniería informática</p>
             </div>
           </li>
           <li>
             <div class="date">2020</div>
             <div class="info">
-              <p class="semi-bold">Politécnico Grancolombiano</p>
-              <p>Ingeniería de Software</p>
+              <p class="semi-bold" data-key="education2">Politécnico Grancolombiano</p>
+              <p data-key="educationDesc2">Ingeniería de Software</p>
             </div>
           </li>
           <li>
             <div class="date">2018 - 2019</div>
             <div class="info">
-              <p class="semi-bold">EducacionIT</p>
-              <p>Diplomatura en Software Informático y Aplicaciones Multimedia</p>
+              <p class="semi-bold" data-key="education3">EducacionIT</p>
+              <p data-key="educationDesc3">Diplomatura en Software Informático y Aplicaciones Multimedia</p>
             </div>
           </li>
           <li>
             <div class="date">2015 - 2017</div>
             <div class="info">
-              <p class="semi-bold">Servicio Nacional de Aprendizaje (SENA)</p>
-              <p>Tecnologo en Tecnología informática/Tecnología de sistemas informáticos</p>
+              <p class="semi-bold" data-key="education4">Servicio Nacional de Aprendizaje (SENA)</p>
+              <p data-key="educationDesc4">Tecnologo en Tecnología informática/Tecnología de sistemas informáticos</p>
             </div>
           </li>
           <li>
             <div class="date">2008 - 2010</div>
             <div class="info">
-              <p class="semi-bold">Universidad Autónoma del Caribe</p>
-              <p>Ingeniería eléctrica, electrónica y de comunicaciones</p>
+              <p class="semi-bold" data-key="education5">Universidad Autónoma del Caribe</p>
+              <p data-key="educationDesc5">Ingeniería eléctrica, electrónica y de comunicaciones</p>
             </div>
           </li>
         </ul>
       </div>
       <div class="resume_item resume_certifications">
         <div class="title">
-          <p class="bold">Certificaciones</p>
+          <p class="bold" data-key="certifications">Certificaciones</p>
         </div>
         <ul>
-          <li>Node.js avanzado</li>
-          <li>Tecnologo en Análisis y Desarrollo de Sistemas de Información</li>
-          <li>Node.js</li>
-          <li>Git going fast</li>
-          <li>Unit Testing and Test Driven Development in NodeJs</li>
+          <li data-key="certification1">Node.js avanzado</li>
+          <li data-key="certification2">Tecnologo en Análisis y Desarrollo de Sistemas de Información</li>
+          <li data-key="certification3">Node.js</li>
+          <li data-key="certification4">Git going fast</li>
+          <li data-key="certification5">Unit Testing and Test Driven Development in NodeJs</li>
         </ul>
       </div>
     </div>
   </div>
 
   <script>
+    const translations = {
+      es: {
+        name: "Francisco Javier Jimenez Cohen",
+        job: "Ingeniero de Software",
+        location: "Buenos Aires, Argentina",
+        phone: "+541163069305",
+        email: "franjicohen@gmail.com",
+        skills: "Aptitudes principales",
+        frameworks: "Frameworks y Librerías",
+        technologies: "Tecnologías",
+        cloud: "Nubes",
+        databases: "Bases de Datos",
+        about: "Acerca de Mi",
+        aboutDesc: "Soy un ingeniero de software con más de 8 años de experiencia en el desarrollo de soluciones tecnológicas para diversos sectores e industrias. Mi pasión es el código y la innovación, y me dedico a crear aplicaciones que aporten valor y satisfacción a los usuarios y clientes. Actualmente, trabajo como ingeniero de software en Acid Labs, una empresa líder en el diseño y desarrollo de productos digitales.",
+        aboutDesc2: "En Acid Labs, he participado en proyectos de alto impacto y complejidad, utilizando tecnologías de vanguardia como Node.js, NestJS, TypeORM, Kafka, Docker, Git y CI/CD. Entre ellos, destaco el desarrollo de una billetera virtual llamada Cencopay para Cencosud, uno de los mayores grupos de retail de Latinoamérica, donde integré APIs como Mambu y diseñé una arquitectura orientada a microservicios. Asimismo, fui arquitecto de software para el análisis y desarrollo de mejoras de un ERP para For Promotional Mexico, un cliente del sector publicitario, donde migré el sistema de tecnologías obsoletas a Java 11 y Spring. Además, he gestionado el sistema del marketplace y las implementaciones productivas para el equipo de Seller Management de Cencosud Chile, asegurando su correcto funcionamiento y optimizando los procesos.",
+        aboutDesc3: "Estas experiencias me han permitido desarrollar y demostrar mis competencias en el desarrollo de software backend, el diseño e integración de API REST, la creación y gestión de microservicios, el uso de brokers como Kafka, la implementación de contenedores con Docker, el control de versiones con Git y la automatización de pruebas y despliegues con CI/CD. Así, he podido entregar soluciones de calidad, escalables, seguras y eficientes, que cumplen con los requerimientos y expectativas de los clientes.",
+        aboutDesc4: "Mi formación académica también respalda mi trayectoria profesional, ya que cuento con un título de Tecnólogo en Análisis y Desarrollo de Sistemas de Información, una Diplomatura en Software Informático y Aplicaciones Multimedia, y una Especialización en Gestión y Diseño de Bases de Datos. Estos estudios me han proporcionado los conocimientos teóricos y prácticos necesarios para abordar los desafíos y oportunidades del sector tecnológico. Mi objetivo es seguir aprendiendo y creciendo como profesional, aportando mi talento y experiencia a proyectos que generen un impacto positivo en la sociedad y el medio ambiente.",
+        work: "Experiencia de Trabajo",
+        job1: "Ingeniero de software en Acid Labs",
+        jobDesc1: "Contrato con Cencosud para el desarrollo de billetera virtual llamada cencopay, desarrollando backend para cashin y cashout integrando APIs como Mambu, orientado a microservicios usando broker como Kafka.",
+        job2: "Arquitecto de software de TI en Acid Labs",
+        jobDesc2: "Arquitecto de Software para análisis y desarrollo de mejoras de ERP del cliente For Promotional Mexico, encargado de establecer arquitectura de software basada en microservicios, establecida sobre arquitectura de infraestructura interna, migrando ERP empresarial de tecnologías obsoletas a Java 11 y Spring, Docker, Git, Gitlab, CI/CD, y herramientas de monitoreo.",
+        job3: "Desarrollador sénior en Acid Labs",
+        jobDesc3: "Desarrollador senior, encargado de modificaciones y creaciones de módulos tanto para el frontend como para el backend del cliente Cencosud Chile. Gestión del sistema del marketplace, implementaciones productivas para el equipo de Seller Management, utilizando tecnologías como React.js, MySQL, AWS, Node.js, API REST, Docker, GitLab, Git y CI/CD.",
+        job4: "Arquitecto y Consultor de Software en Academit s.a.s",
+        jobDesc4: "Auditoria y presentación de propuestas de cambios de .net a Java 11 usando Spring Boot como framework.",
+        job5: "Software Development Engineer Sr en Naranja X",
+        jobDesc5: "Creación y modificación de servicios de backend para el área de home y account. Uso de tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git, contribuyendo a la creación de soluciones tecnológicas eficientes y escalables. Implementación de prácticas de CI/CD.",
+        job6: "Responsable del Curso de Backend con NodeJs en Digital House",
+        jobDesc6: "Encargado del curso de Node.js y Desarrollo web para Latinoamérica y Colombia. Enseñanza de fundamentos y mejores prácticas en el desarrollo web, utilizando tecnologías como MySQL, AWS, Node.js, API REST, Docker, GitLab y Git.",
+        job7: "Software Development Engineer en Santander Tecnología Argentina",
+        jobDesc7: "Desarrollo y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF, WCF, Git, y migración de servicios a tecnologías más recientes como NodeJs, implementaciones con GitLab CI/CD.",
+        job8: "Desarrollador de software en Baufest",
+        jobDesc8: "Creación y modificación de servicios de backend y frontend en el área de banca privada. Uso de tecnologías como Oracle PL/SQL, .NET, WPF y WCF.",
+        job9: "Analista sénior en Bureau Veritas",
+        jobDesc9: "Análisis de datos relacionados a la calidad de los hidrocarburos, seguimientos de datos de continuidad suministrados por el sistema ESCADA y los informes de laboratorios, creación de aplicaciones para el cálculo volumétrico del llenado de tanques de tierra.",
+        job10: "Analista en Intertek",
+        jobDesc10: "Desarrollo de métodos y soluciones para la parametrización de medidas y cálculos para tanques y operaciones de transferencias para un cliente en Zona Franca Barranquilla.",
+        job11: "Analista auxiliar en Camin Cargo Control Group",
+        jobDesc11: "Ingresos, análisis de datos de bases de datos, alta, baja, modificaciones de datos referentes a la operación de cargue y descargue de químicos del sector de los hidrocarburos.",
+        education: "Educación",
+        education1: "Servicio Nacional de Aprendizaje (SENA)",
+        educationDesc1: "Especialización en Gestión y Diseño de Bases de Datos, Ingeniería informática",
+        education2: "Politécnico Grancolombiano",
+        educationDesc2: "Ingeniería de Software",
+        education3: "EducacionIT",
+        educationDesc3: "Diplomatura en Software Informático y Aplicaciones Multimedia",
+        education4: "Servicio Nacional de Aprendizaje (SENA)",
+        educationDesc4: "Tecnologo en Tecnología informática/Tecnología de sistemas informáticos",
+        education5: "Universidad Autónoma del Caribe",
+        educationDesc5: "Ingeniería eléctrica, electrónica y de comunicaciones",
+        certifications: "Certificaciones",
+        certification1: "Node.js avanzado",
+        certification2: "Tecnologo en Análisis y Desarrollo de Sistemas de Información",
+        certification3: "Node.js",
+        certification4: "Git going fast",
+        certification5: "Unit Testing and Test Driven Development in NodeJs"
+      },
+      en: {
+        name: "Francisco Javier Jimenez Cohen",
+        job: "Software Engineer",
+        location: "Buenos Aires, Argentina",
+        phone: "+541163069305",
+        email: "franjicohen@gmail.com",
+        skills: "Main Skills",
+        frameworks: "Frameworks and Libraries",
+        technologies: "Technologies",
+        cloud: "Cloud",
+        databases: "Databases",
+        about: "About Me",
+        aboutDesc: "I am a software engineer with over 8 years of experience in developing technological solutions for various sectors and industries. My passion is code and innovation, and I am dedicated to creating applications that provide value and satisfaction to users and clients. I currently work as a software engineer at Acid Labs, a leading company in the design and development of digital products.",
+        aboutDesc2: "At Acid Labs, I have participated in high-impact and complex projects, using cutting-edge technologies such as Node.js, NestJS, TypeORM, Kafka, Docker, Git, and CI/CD. Among them, I highlight the development of a virtual wallet called Cencopay for Cencosud, one of the largest retail groups in Latin America, where I integrated APIs like Mambu and designed a microservices-oriented architecture. Likewise, I was a software architect for the analysis and development of ERP improvements for For Promotional Mexico, a client in the advertising sector, where I migrated the system from obsolete technologies to Java 11 and Spring. Additionally, I have managed the marketplace system and productive implementations for the Seller Management team of Cencosud Chile, ensuring its proper functioning and optimizing processes.",
+        aboutDesc3: "These experiences have allowed me to develop and demonstrate my skills in backend software development, API REST design and integration, microservices creation and management, broker usage like Kafka, container implementation with Docker, version control with Git, and automation of tests and deployments with CI/CD. Thus, I have been able to deliver quality, scalable, secure, and efficient solutions that meet the clients' requirements and expectations.",
+        aboutDesc4: "My academic background also supports my professional career, as I hold a degree in Technology in Analysis and Development of Information Systems, a Diploma in Software and Multimedia Applications, and a Specialization in Database Management and Design. These studies have provided me with the theoretical and practical knowledge necessary to address the challenges and opportunities of the technology sector. My goal is to continue learning and growing as a professional, contributing my talent and experience to projects that generate a positive impact on society and the environment.",
+        work: "Work Experience",
+        job1: "Software Engineer at Acid Labs",
+        jobDesc1: "Contract with Cencosud for the development of a virtual wallet called cencopay, developing backend for cashin and cashout integrating APIs like Mambu, microservices oriented using broker like Kafka.",
+        job2: "IT Software Architect at Acid Labs",
+        jobDesc2: "Software Architect for ERP analysis and development improvements for the client For Promotional Mexico, in charge of establishing software architecture based on microservices, established on internal infrastructure architecture, migrating corporate ERP from obsolete technologies to Java 11 and Spring, Docker, Git, Gitlab, CI/CD, and monitoring tools.",
+        job3: "Senior Developer at Acid Labs",
+        jobDesc3: "Senior Developer, in charge of frontend and backend module modifications and creations for the client Cencosud Chile. Management of the marketplace system, productive implementations for the Seller Management team, using technologies such as React.js, MySQL, AWS, Node.js, API REST, Docker, GitLab, Git, and CI/CD.",
+        job4: "Software Architect and Consultant at Academit s.a.s",
+        jobDesc4: "Audit and presentation of change proposals from .net to Java 11 using Spring Boot as the framework.",
+        job5: "Senior Software Development Engineer at Naranja X",
+        jobDesc5: "Creation and modification of backend services for the home and account area. Use of technologies such as MySQL, AWS, Node.js, API REST, Docker, GitLab, and Git, contributing to the creation of efficient and scalable technological solutions. Implementation of CI/CD practices.",
+        job6: "NodeJs Backend Course Leader at Digital House",
+        jobDesc6: "Responsible for the Node.js and Web Development course for Latin America and Colombia. Teaching fundamentals and best practices in web development, using technologies such as MySQL, AWS, Node.js, API REST, Docker, GitLab, and Git.",
+        job7: "Software Development Engineer at Santander Tecnología Argentina",
+        jobDesc7: "Development and modification of backend and frontend services in the private banking area. Use of technologies such as Oracle PL/SQL, .NET, WPF, WCF, Git, and migration of services to more recent technologies like NodeJs, implementations with GitLab CI/CD.",
+        job8: "Software Developer at Baufest",
+        jobDesc8: "Creation and modification of backend and frontend services in the private banking area. Use of technologies such as Oracle PL/SQL, .NET, WPF, and WCF.",
+        job9: "Senior Analyst at Bureau Veritas",
+        jobDesc9: "Data analysis related to the quality of hydrocarbons, monitoring of continuity data supplied by the ESCADA system and laboratory reports, creation of applications for the volumetric calculation of filling land tanks.",
+        job10: "Analyst at Intertek",
+        jobDesc10: "Development of methods and solutions for the parameterization of measurements and calculations for tanks and transfer operations for a client in Zona Franca Barranquilla.",
+        job11: "Assistant Analyst at Camin Cargo Control Group",
+        jobDesc11: "Income, database data analysis, high, low, data modifications related to the loading and unloading operations of chemicals in the hydrocarbons sector.",
+        education: "Education",
+        education1: "Servicio Nacional de Aprendizaje (SENA)",
+        educationDesc1: "Specialization in Database Management and Design, Computer Engineering",
+        education2: "Politécnico Grancolombiano",
+        educationDesc2: "Software Engineering",
+        education3: "EducacionIT",
+        educationDesc3: "Diploma in Software and Multimedia Applications",
+        education4: "Servicio Nacional de Aprendizaje (SENA)",
+        educationDesc4: "Technologist in Information Technology/Computer Systems Technology",
+        education5: "Universidad Autónoma del Caribe",
+        educationDesc5: "Electrical, Electronic and Communication Engineering",
+        certifications: "Certifications",
+        certification1: "Advanced Node.js",
+        certification2: "Technologist in Analysis and Development of Information Systems",
+        certification3: "Node.js",
+        certification4: "Git going fast",
+        certification5: "Unit Testing and Test Driven Development in NodeJs"
+      },
+      de: {
+        name: "Francisco Javier Jimenez Cohen",
+        job: "Software-Ingenieur",
+        location: "Buenos Aires, Argentinien",
+        phone: "+541163069305",
+        email: "franjicohen@gmail.com",
+        skills: "Hauptfähigkeiten",
+        frameworks: "Frameworks und Bibliotheken",
+        technologies: "Technologien",
+        cloud: "Cloud",
+        databases: "Datenbanken",
+        about: "Über mich",
+        aboutDesc: "Ich bin ein Software-Ingenieur mit über 8 Jahren Erfahrung in der Entwicklung technologischer Lösungen für verschiedene Sektoren und Branchen. Meine Leidenschaft ist der Code und die Innovation, und ich widme mich der Erstellung von Anwendungen, die den Benutzern und Kunden Wert und Zufriedenheit bieten. Derzeit arbeite ich als Software-Ingenieur bei Acid Labs, einem führenden Unternehmen im Design und in der Entwicklung digitaler Produkte.",
+        aboutDesc2: "Bei Acid Labs habe ich an hochwirksamen und komplexen Projekten teilgenommen, bei denen ich modernste Technologien wie Node.js, NestJS, TypeORM, Kafka, Docker, Git und CI/CD verwendet habe. Zu den Projekten zählt die Entwicklung einer virtuellen Geldbörse namens Cencopay für Cencosud, einen der größten Einzelhandelskonzerne in Lateinamerika, bei dem ich APIs wie Mambu integriert und eine auf Microservices ausgerichtete Architektur entworfen habe. Ebenso war ich Software-Architekt für die Analyse und Entwicklung von ERP-Verbesserungen für For Promotional Mexico, einen Kunden aus der Werbebranche, bei dem ich das System von veralteten Technologien auf Java 11 und Spring migriert habe. Darüber hinaus habe ich das Marktplatzsystem und die produktiven Implementierungen für das Seller Management-Team von Cencosud Chile verwaltet, deren ordnungsgemäßen Betrieb sichergestellt und Prozesse optimiert.",
+        aboutDesc3: "Diese Erfahrungen haben es mir ermöglicht, meine Fähigkeiten in der Backend-Softwareentwicklung, im Design und in der Integration von API REST, in der Erstellung und Verwaltung von Microservices, in der Verwendung von Brokern wie Kafka, in der Implementierung von Containern mit Docker, in der Versionskontrolle mit Git und in der Automatisierung von Tests und Bereitstellungen mit CI/CD zu entwickeln und unter Beweis zu stellen. So konnte ich qualitativ hochwertige, skalierbare, sichere und effiziente Lösungen liefern, die den Anforderungen und Erwartungen der Kunden entsprechen.",
+        aboutDesc4: "Meine akademische Ausbildung unterstützt auch meine berufliche Laufbahn, da ich einen Abschluss in Technologie in Analyse und Entwicklung von Informationssystemen, ein Diplom in Software und Multimedia-Anwendungen und eine Spezialisierung auf Datenbankmanagement und -design habe. Diese Studien haben mir das theoretische und praktische Wissen vermittelt, das notwendig ist, um die Herausforderungen und Chancen des Technologiesektors zu bewältigen. Mein Ziel ist es, weiterhin zu lernen und als Fachmann zu wachsen und mein Talent und meine Erfahrung in Projekte einzubringen, die positive Auswirkungen auf die Gesellschaft und die Umwelt haben.",
+        work: "Berufserfahrung",
+        job1: "Software-Ingenieur bei Acid Labs",
+        jobDesc1: "Vertrag mit Cencosud für die Entwicklung einer virtuellen Geldbörse namens cencopay, Entwicklung des Backends für Cashin und Cashout Integration von APIs wie Mambu, mikroserviceorientiert unter Verwendung von Broker wie Kafka.",
+        job2: "IT-Software-Architekt bei Acid Labs",
+        jobDesc2: "Software-Architekt für ERP-Analyse und Entwicklungsverbesserungen für den Kunden For Promotional Mexico, verantwortlich für die Einrichtung der auf Microservices basierenden Software-Architektur, die auf der internen Infrastrukturarchitektur eingerichtet ist, Migration des Unternehmens-ERP von veralteten Technologien zu Java 11 und Spring, Docker, Git, Gitlab, CI/CD und Überwachungstools.",
+        job3: "Senior-Entwickler bei Acid Labs",
+        jobDesc3: "Senior-Entwickler, verantwortlich für Frontend- und Backend-Modifikationen und -Erstellungen für den Kunden Cencosud Chile. Verwaltung des Marktplatzsystems, produktive Implementierungen für das Seller Management-Team, Verwendung von Technologien wie React.js, MySQL, AWS, Node.js, API REST, Docker, GitLab, Git und CI/CD.",
+        job4: "Software-Architekt und Berater bei Academit s.a.s",
+        jobDesc4: "Audit und Präsentation von Änderungsvorschlägen von .net zu Java 11 unter Verwendung von Spring Boot als Framework.",
+        job5: "Senior Software Development Engineer bei Naranja X",
+        jobDesc5: "Erstellung und Änderung von Backend-Diensten für den Home- und Account-Bereich. Verwendung von Technologien wie MySQL, AWS, Node.js, API REST, Docker, GitLab und Git, Beitrag zur Schaffung effizienter und skalierbarer technologischer Lösungen. Implementierung von CI/CD-Praktiken.",
+        job6: "Verantwortlicher für den Backend-Kurs mit NodeJs bei Digital House",
+        jobDesc6: "Verantwortlich für den Node.js- und Webentwicklungskurs für Lateinamerika und Kolumbien. Vermittlung von Grundlagen und Best Practices in der Webentwicklung unter Verwendung von Technologien wie MySQL, AWS, Node.js, API REST, Docker, GitLab und Git.",
+        job7: "Software Development Engineer bei Santander Tecnología Argentina",
+        jobDesc7: "Entwicklung und Änderung von Backend- und Frontend-Diensten im Bereich Private Banking. Verwendung von Technologien wie Oracle PL/SQL, .NET, WPF, WCF, Git und Migration von Diensten zu neueren Technologien wie NodeJs, Implementierungen mit GitLab CI/CD.",
+        job8: "Software-Entwickler bei Baufest",
+        jobDesc8: "Erstellung und Änderung von Backend- und Frontend-Diensten im Bereich Private Banking. Verwendung von Technologien wie Oracle PL/SQL, .NET, WPF und WCF.",
+        job9: "Senior-Analyst bei Bureau Veritas",
+        jobDesc9: "Datenanalyse im Zusammenhang mit der Qualität von Kohlenwasserstoffen, Überwachung von Kontinuitätsdaten, die vom ESCADA-System und Laborberichten geliefert werden, Erstellung von Anwendungen für die volumetrische Berechnung der Befüllung von Landtanks.",
+        job10: "Analyst bei Intertek",
+        jobDesc10: "Entwicklung von Methoden und Lösungen für die Parametrisierung von Messungen und Berechnungen für Tanks und Transferoperationen für einen Kunden in der Freihandelszone Barranquilla.",
+        job11: "Hilfsanalyst bei Camin Cargo Control Group",
+        jobDesc11: "Einnahmen, Datenbankdatenanalyse, hohe, niedrige, Datenänderungen im Zusammenhang mit den Lade- und Entladevorgängen von Chemikalien im Kohlenwasserstoffsektor.",
+        education: "Bildung",
+        education1: "Servicio Nacional de Aprendizaje (SENA)",
+        educationDesc1: "Spezialisierung auf Datenbankmanagement und -design, Computertechnik",
+        education2: "Politécnico Grancolombiano",
+        educationDesc2: "Softwaretechnik",
+        education3: "EducacionIT",
+        educationDesc3: "Diplom in Software und Multimedia-Anwendungen",
+        education4: "Servicio Nacional de Aprendizaje (SENA)",
+        educationDesc4: "Technologe für Informationstechnologie/Technologie der Computersysteme",
+        education5: "Universidad Autónoma del Caribe",
+        educationDesc5: "Elektro-, Elektronik- und Kommunikationstechnik",
+        certifications: "Zertifizierungen",
+        certification1: "Fortgeschrittenes Node.js",
+        certification2: "Technologe für Analyse und Entwicklung von Informationssystemen",
+        certification3: "Node.js",
+        certification4: "Git going fast",
+        certification5: "Unit Testing and Test Driven Development in NodeJs"
+      }
+    };
+
+    function changeLanguage() {
+      const selectedLang = document.getElementById('language').value;
+      const elements = document.querySelectorAll('[data-key]');
+
+      elements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        element.innerText = translations[selectedLang][key];
+      });
+    }
+
     function highlightExperience(technology) {
       document.querySelectorAll('.experience-item').forEach(item => {
         item.classList.remove('highlight');
